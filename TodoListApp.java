@@ -79,7 +79,9 @@ public class TodoListApp {
             }
 
         } while (choice != 5);
-
+        tasks.sort((t1, t2) -> t1.description.compareToIgnoreCase(t2.description));
+        System.out.println("Tasks sorted alphabetically.");
+        
         scanner.close();
     }
 }
